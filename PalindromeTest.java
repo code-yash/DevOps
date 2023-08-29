@@ -7,12 +7,14 @@ public class PalindromeTest {
         assertTrue(PalindromeChecker.isPalindrome("racecar"));
         assertTrue(PalindromeChecker.isPalindrome("rotor"));
         assertTrue(PalindromeChecker.isPalindrome("madam"));
+        
     }
 
     @Test
     public void testInvalidPalindromes() {
        assertFalse(PalindromeChecker.isPalindrome("hello"));
         assertFalse(PalindromeChecker.isPalindrome("world"));
+        assertTrue(PalindromeChecker.isPalindrome("yash"));
     }
 
     @Test
