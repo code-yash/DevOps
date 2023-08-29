@@ -1,7 +1,7 @@
 public class PalindromeChecker {
     public static boolean isPalindrome(String str) {
          // Remove spaces and punctuation, and convert to lowercase
-        // String cleanedStr = str.replaceAll("[^a-zA-Z]", "").toLowerCase();
+        String cleanedStr = str.replaceAll("[^a-zA-Z]", "").toLowerCase();
         
         int left = 0;
         int right = cleanedStr.length() - 1;
