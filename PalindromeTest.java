@@ -14,13 +14,13 @@ public class PalindromeTest {
         assertFalse(PalindromeChecker.isPalindrome("world"));
     }
 
-    // @Test
-    // public void testEmptyString() {
-    //     assertTrue(PalindromeChecker.isPalindrome(""));
-    // }
+    @Test
+    public void testEmptyString() {
+        assertTrue(PalindromeChecker.isPalindrome(""));
+    }
 
-    // @Test
-    // public void testSingleCharacter() {
-    //     assertTrue(PalindromeChecker.isPalindrome("a"));
+    @Test
+    public void testSingleCharacter() {
+        assertTrue(PalindromeChecker.isPalindrome("a"));
     }
 }
