@@ -6,6 +6,7 @@ public class PalindromeTest {
     public void testValidPalindromes() {
         assertTrue(PalindromeChecker.isPalindrome("racecar"));
         assertTrue(PalindromeChecker.isPalindrome("rotor"));
+        assertTrue(PalindromeChecker.isPalindrome("madam"));
     }
 
     @Test
