@@ -1,1 +1,35 @@
-{\rtf1}
+pipeline {
+    agent any
+
+    stages {
+        stage('Fetch and Compile') {
+            steps {
+                script {
+                    def repoDir = 'DevOps'
+                    def repoUrl = 'https://github.com/code-yash/DevOps.git'
+                    
+                    // Check if the directory exists
+                    def dirExists = fileExists(repoDir)
+                    
+                    if (dirExists) {
+                        // Update the repository
+                        bat "cd ${repoDir} && git pull"
+                    } else {
+                        // Clone the repository
+                        bat "git clone ${repoUrl}"
+                    }
+                    
+                    // Compile Java code
+                    bat script: "cd ${repoDir} && javac PalindromeChecker.java && javac -cp lib/*;. PalindromeTest.java"
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Run tests using JUnit (replace with your testing framework)
+                bat script: "cd DevOps && java -cp lib/*;. org.junit.runner.JUnitCore PalindromeTest"
+            }
+        }
+    }
+}
