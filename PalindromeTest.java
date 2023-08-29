@@ -14,7 +14,7 @@ public class PalindromeTest {
     public void testInvalidPalindromes() {
        assertFalse(PalindromeChecker.isPalindrome("hello"));
         assertFalse(PalindromeChecker.isPalindrome("world"));
-        assertTrue(PalindromeChecker.isPalindrome("yash"));
+        assertFalse(PalindromeChecker.isPalindrome("yash"));
     }
 
     @Test
